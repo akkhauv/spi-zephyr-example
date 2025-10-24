@@ -20,11 +20,6 @@ static const struct spi_dt_spec spi_device = SPI_DT_SPEC_GET(
 
 int main()
 {
-    /*
-    - I want to read four bytes so I need a four-byte array.
-    - That array needs to be a member of a spi_buf
-    - spi_buf needs to be a member of a spi_buf_set
-    */
     // read
     uint8_t read_buf[LEN_TRANSCEIVE] = {0};
     struct spi_buf spi_read_buf = {&read_buf, LEN_TRANSCEIVE};
